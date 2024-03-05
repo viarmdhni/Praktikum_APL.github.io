@@ -5,7 +5,7 @@ using namespace std;
 struct akun {
     int user;
     string password;
-}
+}; // Tambahkan tanda titik koma di sini
 
 map<int, akun> daftarAkun;
 
@@ -41,21 +41,23 @@ void login() {
         cin >> password;
         if (daftarAkun[user].password == password) {
             cout << "Login berhasil. Selamat datang!\n";
-            } else {
-                cout << "Password salah.\n";
-                coba++;
-            }
+            return;
+        } else {
+            cout << "Password salah.\n";
+            coba++;
+        }
     }
     cout << "Gagal login. Coba lagi nanti.\n";
 }
 
-void angka() {
+double angka() {
     double angka;
-    cout << "masukkan angka yang ingin di konversi : \n"
+    cout << "masukkan angka yang ingin di konversi : ";
     cin >> angka;
+    return angka;
 }
 
-void km_jam(double angka) {
+double km_jam(double angka) {
     int choice;
     do {
         cout << "Ubah ke :\n";
@@ -68,13 +70,10 @@ void km_jam(double angka) {
         switch (choice) {
             case 1:
                 return (angka * 100000) / 3600;
-                break;
             case 2:
                 return (angka * 1000) / 3600;
-                break;
             case 3:
                 return (angka * 0.621371);
-                break;
             case 4:
                 cout << "Progam berhenti.\n";
                 break;
@@ -84,7 +83,7 @@ void km_jam(double angka) {
     } while (choice != 4);
 }
 
-void cm_det(double angka) {
+double cm_det(double angka) {
     int choice;
     do {
         cout << "Ubah ke :\n";
@@ -97,13 +96,10 @@ void cm_det(double angka) {
         switch (choice) {
             case 1:
                 return (angka / 100000.0) * 3600.0;
-                break;
             case 2:
                 return angka / 100.0;
-                break;
             case 3:
                 return angka * 3600 / 160934.4;
-                break;
             case 4:
                 cout << "Progam berhenti.\n";
                 break;
@@ -113,7 +109,7 @@ void cm_det(double angka) {
     } while (choice != 4);
 }
 
-void m_det(double angka) {
+double m_det(double angka) {
     int choice;
     do {
         cout << "Ubah ke :\n";
@@ -142,7 +138,7 @@ void m_det(double angka) {
     } while (choice != 4);
 }
 
-void mil_jam(double angka) {
+double mil_jam(double angka) {
     int choice;
     do {
         cout << "Ubah ke :\n";
@@ -154,7 +150,7 @@ void mil_jam(double angka) {
         cin >> choice;
         switch (choice) {
             case 1:
-                return angka * 1.60934
+                return angka * 1.60934;
                 break;
             case 2:
                 return angka * 1609.34 * 100 / 3600;
@@ -198,7 +194,7 @@ int main() {
     return 0;
 }
 
-int main() {
+int main2() {
     int choice;
     do {
         cout << "pilih jenis angka yang ingin dikonversi : ";
@@ -216,7 +212,7 @@ int main() {
                 break;
             case 2:
                 angka();
-                cm_det()
+                cm_det();
                 break;
             case 3:
                 angka();
