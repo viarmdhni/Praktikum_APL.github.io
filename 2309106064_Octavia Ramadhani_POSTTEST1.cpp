@@ -122,13 +122,10 @@ double m_det(double angka) {
         switch (choice) {
             case 1:
                 return angka * 3600 / 1000;
-                break;
             case 2:
                 return angka * 100;
-                break;
             case 3:
                 return angka * 2.23694;
-                break;
             case 4:
                 cout << "Progam berhenti.\n";
                 break;
@@ -151,13 +148,10 @@ double mil_jam(double angka) {
         switch (choice) {
             case 1:
                 return angka * 1.60934;
-                break;
             case 2:
                 return angka * 1609.34 * 100 / 3600;
-                break;
             case 3:
                 return angka * 1609.34 / 3600;
-                break;
             case 4:
                 cout << "Progam berhenti.\n";
                 break;
