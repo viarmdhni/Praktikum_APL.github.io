@@ -5,7 +5,7 @@ using namespace std;
 struct akun {
     int user;
     string password;
-}; // Tambahkan tanda titik koma di sini
+}; 
 
 map<int, akun> daftarAkun;
 
